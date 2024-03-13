@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button data-name="Кросовки" data-price="4500" id="but">Купить</button>
+    <script>
+        document.getElementById('but').onclick = (e) => {
+            console.log(e.target);
+            console.log(e.target.dataset);
+            console.log(e.target.dataset.name);
+            console.log(e.target.dataset.price);
+
+            localStorage.setItem("name", e.target.dataset.name);
+            localStorage.setItem('price', e.target.dataset.price)
+        }
+    </script>
+</body>
+
+</html>
